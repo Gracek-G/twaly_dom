@@ -69,7 +69,48 @@
             </div>
         </div>
         <!-- Lightbox obrazow -->
-        
+        <!-- Obrazy sluzace do otwarcia Lightboxa -->
+        <div class="szereg">
+            <div class="kolumna">
+                <img src="/Lightbox/img_1.jpg" onclick="openModal(); currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_2.jpg" onclick="openModal(); currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_3.jpg" onclick="openModal(); currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_4.jpg" onclick="openModal(); currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+        <!-- Lightbox -->
+        <div id="mojLightbox" class="lightbox">
+            <span class="kursor zamkniecie" onclick="closeModal()">&times;</span>
+            <div class="lightbox-zawartosc">
+              
+                <div class="mojeSlajdy">
+                    <div class="numertext">1 / 4</div>
+                    <img src="/Lightbox/img_1.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">2 / 4</div>
+                    <img src="/Lightbox/img_2.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">3 / 4</div>
+                    <img src="/Lightbox/img_3.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">4 / 4</div>
+                    <img src="/Lightbox/img_4.jpg" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
         <!-- Skrypt uruchamiajacy Slider obrazow -->
         <script>
             initComparisons();

@@ -121,25 +121,23 @@ img#logo-firmy-obraz {
 
 /* Projekty */
 
+/* Slider - styling */
 .porownanie-obrazow-kontener {
     position: relative;
     margin-bottom: 6rem;
     width: 600px;
     height: 400px; /*should be the same height as the images*/
   }
-  
 .porownanie-obrazow-obraz {
     position: absolute;
     border-radius: 25px;
     width: auto;
     height: auto;
     overflow: hidden;
-  }
-  
+}
 .porownanie-obrazow-obraz img {
     display: block;
-  }
-  
+}
 .porownanie-obrazow-slider {
     position: absolute;
     z-index: 9;
@@ -150,4 +148,6 @@ img#logo-firmy-obraz {
     background-color: #2196F3;
     opacity: 0.7;
     border-radius: 50%;
-  }
+}
+
+/* Lightbox - styling */
