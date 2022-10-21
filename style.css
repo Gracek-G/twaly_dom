@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 :root {
-    --background: linear-gradient(179deg, #FFFFFF 0%, #F3EBCE 100%);
+    --background-color: rgba(255, 255, 235, 1);
+    --background-image: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
+    --nav-backround:rgba(255, 255, 255, 0.80);
 }
 
+* {
+    box-sizing: border-box;
+}
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,7 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Nunito', sans-serif;
-    background: var(--background);
+    background-color: var(--background-color);
+    background-image: var(--background-image);
 }
 
 section {
@@ -24,7 +30,6 @@ section {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    z-index: 2;
 }
 
 h1 {
@@ -45,7 +50,7 @@ nav  {
     justify-content: center;
     position: fixed;
     font-size: 2rem;
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: var(--nav-backround);
 }
 a {
     margin-right: 80;
@@ -54,14 +59,46 @@ a {
 }
 
 /* Strona główna */
-.strona-główna-kontener {
+.strona-glowna-kontener {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    position: relative;
 }
 
+video {
+    height: auto;
+    width: 100vw;
+}
+
+.nakładka-wideo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(182, 181, 181, 0.4);
+    z-index: 2;
+}
+
+.logo-kontener {
+    position: absolute;
+    z-index: 3;
+}
 
 img#logo-firmy-obraz {
+    margin-top: 6rem;
     height: 300px;
     width: 300px;
+}
+
+.nazwa-firmy {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 20rem;
+    z-index: 3;
 }
 
 /* O Nas */
@@ -81,3 +118,36 @@ img#logo-firmy-obraz {
     border-radius: 20px;
     text-align: justify;
 }
+
+/* Projekty */
+
+/* Slider - styling */
+.porownanie-obrazow-kontener {
+    position: relative;
+    margin-bottom: 6rem;
+    width: 600px;
+    height: 400px; /*should be the same height as the images*/
+  }
+.porownanie-obrazow-obraz {
+    position: absolute;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+.porownanie-obrazow-obraz img {
+    display: block;
+}
+.porownanie-obrazow-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: #2196F3;
+    opacity: 0.7;
+    border-radius: 50%;
+}
+
+/* Lightbox - styling */

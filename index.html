@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firma taty Andrzeja</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Script -->
+   <script src="/Slider/slider.js"></script>
+   <script src="script.js"></script>
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="logo_firmy_placeholder.png">
 </head>
@@ -19,14 +22,20 @@
 
    <!-- Strona główna - sekcja -->
    <section id="strona-główna">
-        <div class="strona-główna-kontener">
-            <img src="logo_firmy_placeholder.png" alt="Nazwa Firmy" id="logo-firmy-obraz">
+    <div class="strona-glowna-kontener" id="strona-glowna-kontener">
+        <div class="nakładka-wideo"></div>
+        <div class="video-kontener" id="video-kontener">
             <video class="tło-wideo" loop muted autoplay>
                 <source src="video-background-1.mp4"></source>
             </video>
-            <div class="nakładka-wideo"></div>
-            <h1>Nazwa firmy</h1>
+        </div>    
+        <div class="logo-kontener" id="logo-kontener">
+            <img src="logo_firmy_placeholder.png" alt="Nazwa Firmy" id="logo-firmy-obraz">
         </div>
+        <div class="nazwa-firmy" id="nazwa-firmy">
+            <h1>Trwały Dom</h1>
+        </div>
+    </div>
    </section>
 
    <!-- O Firmie - sekcja -->
@@ -41,12 +50,72 @@
 
    <!-- Projekty - sekcja -->
    <section id="projekty">
-        <div class="projekty-kontener" id="projekty-kontener">
-            <h2>Projekty</h2>
-            <div class="obraz-kontener" id="obraz-kontener">
-                <img src="" alt="" srcset="">
+        <h2>Projekty</h2>
+        <!-- Slider obrazow -->
+        <div class="porownanie-obrazow-kontener">
+            <div class="porownanie-obrazow-obraz">
+              <img src="/Slider/nowy_budynek_1.jpg" width="600" height="400">
+            </div>
+            <div class="porownanie-obrazow-obraz porownanie-obrazow-nakladka">
+              <img src="/Slider/zniszczony_budynek_1.jpg" width="600" height="400">
+            </div>
+          </div>
+        <div class="porownanie-obrazow-kontener">
+            <div class="porownanie-obrazow-obraz">
+              <img src="/Slider/nowy_budynek_2.jpg" width="600" height="400">
+            </div>
+            <div class="porownanie-obrazow-obraz porownanie-obrazow-nakladka">
+              <img src="/Slider/zniszczony_budynek_2.jpeg" width="600" height="400">
             </div>
         </div>
+        <!-- Lightbox obrazow -->
+        <!-- Obrazy sluzace do otwarcia Lightboxa -->
+        <div class="szereg">
+            <div class="kolumna">
+                <img src="/Lightbox/img_1.jpg" onclick="openModal(); currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_2.jpg" onclick="openModal(); currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_3.jpg" onclick="openModal(); currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="kolumna">
+                <img src="/Lightbox/img_4.jpg" onclick="openModal(); currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+        <!-- Lightbox -->
+        <div id="mojLightbox" class="lightbox">
+            <span class="kursor zamkniecie" onclick="closeModal()">&times;</span>
+            <div class="lightbox-zawartosc">
+              
+                <div class="mojeSlajdy">
+                    <div class="numertext">1 / 4</div>
+                    <img src="/Lightbox/img_1.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">2 / 4</div>
+                    <img src="/Lightbox/img_2.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">3 / 4</div>
+                    <img src="/Lightbox/img_3.jpg" style="width:100%">
+                </div>
+                <div class="mojeSlajdy">
+                    <div class="numertext">4 / 4</div>
+                    <img src="/Lightbox/img_4.jpg" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Skrypt uruchamiajacy Slider obrazow -->
+        <script>
+            initComparisons();
+        </script>
+        <!-- !!!!! KONCOWO WYBRAC TYLKO JEDEN ZE SPOSOBOW PRZEDSTAWIANIA ZDJEC !!!! -->
    </section>
 
    <!-- Kontakt - sekcja -->
@@ -57,7 +126,6 @@
         </div>
    </section>
    
-   <!-- Script -->
-   <script src="script.js"></script>
+
 </body>
 </html>
