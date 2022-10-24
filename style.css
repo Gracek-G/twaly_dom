@@ -4,6 +4,7 @@
     --background-color: rgba(255, 255, 235, 1);
     --background-image: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
     --nav-backround:rgba(255, 255, 255, 0.80);
+    --modal-background: rgba(0, 0, 0, 0.90);
 }
 
 * {
@@ -52,7 +53,7 @@ nav  {
     font-size: 2rem;
     background-color: var(--nav-backround);
 }
-a {
+nav > a {
     margin-right: 80;
     text-decoration: none;
     color: black;
@@ -119,7 +120,7 @@ img#logo-firmy-obraz {
     text-align: justify;
 }
 
-/* Projekty */
+/* Projekty - sekcja */
 
 /* Slider - styling */
 .porownanie-obrazow-kontener {
@@ -127,7 +128,7 @@ img#logo-firmy-obraz {
     margin-bottom: 6rem;
     width: 600px;
     height: 400px; /*should be the same height as the images*/
-  }
+}
 .porownanie-obrazow-obraz {
     position: absolute;
     border-radius: 25px;
@@ -150,4 +151,134 @@ img#logo-firmy-obraz {
     border-radius: 50%;
 }
 
+
 /* Lightbox - styling */
+.row > .column {
+    padding: 0 8px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 4rem;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--modal-background);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    height:50%;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides > img {
+    height: auto;
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    padding: 1rem;
+    /* margin-top: -50px; */
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    position: absolute;
+    
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    padding: 2px 16px;
+    color: white;
+}
+img.demo {
+    opacity: 0.6;
+    width: 80%;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
