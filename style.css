@@ -173,7 +173,7 @@ img#logo-firmy-obraz {
     display: none;
     position: fixed;
     z-index: 100;
-    padding-top: 4rem;
+    padding-top: 1rem;
     left: 0;
     top: 0;
     width: 100vw;
@@ -185,7 +185,6 @@ img#logo-firmy-obraz {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     padding: 0;
     width: 50%;
@@ -225,15 +224,15 @@ img#logo-firmy-obraz {
     cursor: pointer;
     position: absolute;
     padding: 1rem;
-    /* margin-top: -50px; */
     bottom: 0;
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-text-stroke: 0.5px #000;
 }
 
 /* Position the "next button" to the right */
