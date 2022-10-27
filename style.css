@@ -39,8 +39,10 @@ h1 {
 }
 
 h2 {
-    font-size: 65px;
+    font-size: 5em;
     text-align: center;
+    margin: 0;
+    margin-top: 0.4em;
 }
 
 /* Pasek nawigacji */
