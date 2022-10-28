@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firma taty Andrzeja</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Script -->
+
+    <!-- Scripts -->
     <script src="/Slider/slider.js"></script>
     <script src="/Lightbox/lightbox.js"></script>
-    <script src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="logo_firmy_placeholder.png">
 </head>
@@ -141,18 +143,20 @@
     <!-- Kontakt - sekcja -->
     <section id="kontakt">
         <h2>Kontakt</h2>
-        <form method="post" action="subscriberform.php">
-            <p>Imię i Nazwisko</p>
-            <p><input name="imie_i_nazwisko" value="Imię i nazwisko"></p>
+        <form method="post" action="send-email.php" id="contact-form">
+            <p><label for="name">Imię i nazwisko:</label></p>
+            <p><input name="name" id="name" required></p>
 
-            <p>Adres e-mail</p>
-            <p><input name="email" value="twój@email.pl"></p>
+            <p><label for="email">E-mail:</label></p>
+            <p><input name="email" id="email" required></p>
 
-            <p>Treść wiadomości</p>
-            <textarea name="message" rows="15" cols="50"></textarea>
+            <p><label for="message">Treść wiadomości</label></p>
+            <textarea name="message" rows="15" cols="50" id="message" required></textarea>
+            <br>
             <input type="submit" value="Wyślij">
         </form>
     </section>
 
 </body>
+<script src="contact-form.js"></script>
 </html>
