@@ -143,20 +143,16 @@
     <!-- Kontakt - sekcja -->
     <section id="kontakt">
         <h2>Kontakt</h2>
-        <form method="post" action="send-email.php" id="contact-form">
-            <p><label for="name">Imię i nazwisko:</label></p>
-            <p><input name="name" id="name" required></p>
-
-            <p><label for="email">E-mail:</label></p>
-            <p><input name="email" id="email" required></p>
-
-            <p><label for="message">Treść wiadomości</label></p>
-            <textarea name="message" rows="15" cols="50" id="message" required></textarea>
+        <form method="post" action="" id="contact-form">
+            <input name="name" id="name" placeholder="Imię i Nazwisko" required>
             <br>
-            <input type="submit" value="Wyślij">
+            <input type="email" name="email" placeholder="Adres e-mail" required>
+            <br>
+            <textarea name="message" rows="15" cols="50" id="message" placeholder="Treść wiadomości" required></textarea>
+            <br>
+            <button type="submit">Wyślij</button>
         </form>
     </section>
 
 </body>
-<script src="contact-form.js"></script>
 </html>
