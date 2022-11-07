@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 :root {
-    --background-color: rgba(255, 255, 235, 1);
-    --background-image: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
-    --nav-backround:rgba(255, 255, 255, 0.80);
+    --background-color: rgb(255, 255, 255);
+    --body-background: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
+    --nav-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.03) 100%);
+    --wrapper-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,253,245,1) 100%);
     --modal-background: rgba(0, 0, 0, 0.90);
+    --nav-font: 'Nunito', sans-serif;
 }
 
 * {
@@ -20,9 +23,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Nunito', sans-serif;
-    background-color: var(--background-color);
-    background-image: var(--background-image);
+    font-family: 'Oxygen', sans-serif;
+    background-image: var(--body-background);
 }
 
 section {
@@ -31,11 +33,19 @@ section {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.wrapper {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    background: var(--wrapper-background);
+    box-shadow: 0px 0px 15px 1px rgba(73, 73, 76, 1);
 }
 
 h1 {
-    letter-spacing: 5px;
-    font-size: 100px;
+    font-size: 7rem;
 }
 
 h2 {
@@ -49,16 +59,41 @@ h2 {
 nav  {
     z-index: 99;
     width: 100vw;
+    height: 5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: fixed;
-    font-size: 2rem;
-    background-color: var(--nav-backround);
+    font-size: 3rem;
+    text-transform: uppercase;
+    background: var(--nav-background);
+    font-family: var(--nav-font);
 }
 nav > a {
-    margin-right: 80;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    
+    display: inline-block;
+    margin-right: 3em;
+    position: relative;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 /* Strona główna */
@@ -88,20 +123,17 @@ video {
 .logo-kontener {
     position: absolute;
     z-index: 3;
+    margin-top: 3rem;
 }
 
 img#logo-firmy-obraz {
-    margin-top: 6rem;
+    position: relative;
     height: 300px;
     width: 300px;
-}
-
-.nazwa-firmy {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 20rem;
-    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin-bottom: 80px;
 }
 
 /* O Nas */
@@ -109,7 +141,7 @@ img#logo-firmy-obraz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
 }
 .ramka-tekstu {
