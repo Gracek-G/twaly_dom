@@ -3,18 +3,17 @@
 
 :root {
     --background-color: rgb(255, 255, 255);
-    --body-background: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
+    --body-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,230,209,1) 100%);
     --nav-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.03) 100%);
-    --wrapper-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,253,245,1) 100%);
+    --wrapper-background: rgb(255, 255, 255);
     --modal-background: rgba(0, 0, 0, 0.90);
-    --nav-font: 'Nunito', sans-serif;
+    --nav-font: 'Helvetica', sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -23,7 +22,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     background-image: var(--body-background);
 }
 
@@ -38,8 +37,8 @@ section {
 }
 
 .wrapper {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 13%;
+    margin-right: 13%;
     background: var(--wrapper-background);
     box-shadow: 0px 0px 15px 1px rgba(73, 73, 76, 1);
 }
@@ -52,30 +51,30 @@ h2 {
     font-size: 5em;
     text-align: center;
     margin: 0;
-    margin-top: 0.4em;
 }
 
 /* Pasek nawigacji */
 nav  {
     z-index: 99;
     width: 100vw;
-    height: 5rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    background: var(--nav-background);
+    background-color: white;
+    /* background: var(--nav-background); */
     font-family: var(--nav-font);
+    font-weight: bold;
 }
 nav > a {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     text-decoration: none;
-    
     display: inline-block;
-    margin-right: 3em;
+    margin-right: 6em;
     position: relative;
 }
 
@@ -123,17 +122,11 @@ video {
 .logo-kontener {
     position: absolute;
     z-index: 3;
-    margin-top: 3rem;
 }
 
 img#logo-firmy-obraz {
-    position: relative;
     height: 300px;
     width: 300px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    margin-bottom: 80px;
 }
 
 /* O Nas */
@@ -187,9 +180,7 @@ img#logo-firmy-obraz {
 
 /* MY GALLERY */
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 5rem;
+    margin-top: 8rem;
 }
 
 .small-image-container > img {
@@ -326,4 +317,53 @@ img.hover-shadow {
 
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Kontakt */
+.kontakt-ramka {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgba(37, 36, 36, 1);
+    border-radius: 20px;
+    padding: 50px;
+    padding-bottom: 30px;
+}
+
+.dane-kontaktowe {
+    margin-right: 5rem;
+}
+
+.dane-kontaktowe > div {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.imie-nazwisko > i {
+    margin-right: 1rem;
+}
+
+.imie-nazwisko > p {
+    margin: 0;
+}
+
+.adres-email > p {
+    margin: 0;
+}
+
+.adres-email > i {
+    margin-right: 1rem;
+}
+.numer-telefonu > p {
+    margin: 0;
+}
+
+.numer-telefonu > i {
+    margin-right: 1rem;
+}
+
+.mapa-google {
+    border-style: solid;
+    border-width: 1px;
+    
 }
