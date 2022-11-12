@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 
 :root {
-    --background-color: rgba(255, 255, 235, 1);
-    --background-image: linear-gradient(180deg, rgba(255, 255, 235, 1) 35%, rgba(255, 252, 163, 1) 87%);
-    --nav-backround:rgba(255, 255, 255, 0.80);
+    --background-color: rgb(255, 255, 255);
+    --body-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,230,209,1) 100%);
+    --nav-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.03) 100%);
+    --wrapper-background: rgb(255, 255, 255);
     --modal-background: rgba(0, 0, 0, 0.90);
+    --nav-font: 'Montserrat', sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -20,9 +23,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Nunito', sans-serif;
-    background-color: var(--background-color);
-    background-image: var(--background-image);
+    font-family: 'Helvetica', sans-serif;
+    background-image: var(--body-background);
 }
 
 section {
@@ -31,34 +33,77 @@ section {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.wrapper {
+    margin-left: 13%;
+    margin-right: 13%;
+    background: var(--wrapper-background);
+    box-shadow: 0px 0px 15px 1px rgba(73, 73, 76, 1);
 }
 
 h1 {
-    letter-spacing: 5px;
-    font-size: 100px;
+    font-size: 7rem;
 }
 
 h2 {
     font-size: 5em;
     text-align: center;
     margin: 0;
-    margin-top: 0.4em;
 }
 
 /* Pasek nawigacji */
 nav  {
     z-index: 99;
     width: 100vw;
+    height: 6rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: fixed;
-    font-size: 2rem;
-    background-color: var(--nav-backround);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: white;
+    /* background: var(--nav-background); */
+    font-family: var(--nav-font);
+    font-weight: bold;
 }
 nav > a {
-    margin-right: 80;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    display: inline-block;
+    margin-right: 6em;
+    position: relative;
+}
+
+nav > a:last-child {
+    margin-right: 0;
+}
+
+#logo-top-right {
+    height: 10rem;
+    width: 10rem;
+    margin-right: 55rem;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 /* Strona główna */
@@ -91,17 +136,9 @@ video {
 }
 
 img#logo-firmy-obraz {
-    margin-top: 6rem;
-    height: 300px;
-    width: 300px;
-}
-
-.nazwa-firmy {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 20rem;
-    z-index: 3;
+    margin-top: 15%;
+    height: 50rem;
+    width: 50rem;
 }
 
 /* O Nas */
@@ -109,7 +146,7 @@ img#logo-firmy-obraz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
 }
 .ramka-tekstu {
@@ -124,162 +161,104 @@ img#logo-firmy-obraz {
 
 /* Projekty - sekcja */
 
-/* Slider - styling */
-.porownanie-obrazow-kontener {
-    position: relative;
-    margin-bottom: 6rem;
-    width: 600px;
-    height: 400px; /*should be the same height as the images*/
-}
-.porownanie-obrazow-obraz {
-    position: absolute;
-    border-radius: 25px;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-}
-.porownanie-obrazow-obraz img {
-    display: block;
-}
-.porownanie-obrazow-slider {
-    position: absolute;
-    z-index: 9;
-    cursor: ew-resize;
-    /*set the appearance of the slider:*/
-    width: 40px;
-    height: 40px;
-    background-color: #2196F3;
-    opacity: 0.7;
-    border-radius: 50%;
+/* Moj lighbox */
+.gallery-container {
+    margin-top: 8rem;
 }
 
-
-/* Lightbox - styling */
-.row > .column {
-    padding: 0 8px;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.small-image-container > img {
+    width: 500px;
 }
 
-/* Create four equal columns that floats next to eachother */
-.column {
-    float: left;
-    width: 25%;
+/* Kontakt */
+/* Lewa strona kontaktu */
+.kontakt-ramka {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgba(37, 36, 36, 1);
+    border-radius: 20px;
+    padding: 50px;
+    padding-bottom: 30px;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    padding-top: 1rem;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--modal-background);
+.dane-kontaktowe {
+    margin-right: 5rem;
 }
 
-/* Modal Content */
-.modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 50%;
-    height:50%;
+.dane-kontaktowe > div {
+    display: flex;
+    margin-bottom: 1rem;
 }
 
-/* The Close Button */
-.close {
-    color: white;
-    position: absolute;
-    top: 1rem;
-    right: 4rem;
-    font-size: 35px;
-    font-weight: bold;
+.imie-nazwisko > i {
+    margin-right: 1rem;
 }
 
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
+.imie-nazwisko > p {
+    margin: 0;
 }
 
-/* Hide the slides by default */
-.mySlides {
-    display: none;
+.adres-email > p {
+    margin: 0;
 }
 
-.mySlides > img {
-    height: auto;
-    width: 100%;
+.adres-email > i {
+    margin-right: 1rem;
+}
+.numer-telefonu > p {
+    margin: 0;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    padding: 1rem;
-    bottom: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-text-stroke: 0.5px #000;
+.numer-telefonu > i {
+    margin-right: 1rem;
 }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    position: absolute;
+.mapa-google {
+    border-style: solid;
+    border-width: 1px;
     
 }
 
-/* Caption text */
-.caption-container {
-    text-align: center;
-    padding: 2px 16px;
-    color: white;
-}
-img.demo {
-    opacity: 0.6;
-    width: 80%;
+/* Prawa strona kontaktu */
+
+.feedback-input {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 1rem;
+    border-radius: 5px;
+    line-height: 15px;
+    background-color: transparent;
+    border:2px solid #818181;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:35rem;
+    box-sizing: border-box;
+    outline:0;
 }
 
-.active,
-.demo:hover {
-    opacity: 1;
+.feedback-input:focus { border:2px solid #000000; }
+
+textarea {
+    height: 20rem;
+    line-height: 150%;
+    resize:none;
 }
 
-img.hover-shadow {
-    transition: 0.3s;
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#818181;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
 }
-
-.hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+[type="submit"]:hover { background:#CC4949; }
