@@ -21,7 +21,7 @@
 <body>
     <!-- Menu nawigacji strony -->
     <nav id="nawigacja">
-        <a href="#strona-główna">Strona główna</a>
+        <a href="#strona-główna"><img src="TDlogo_basic.png" alt="logo_mini" id="logo-top-right"></a>
         <a href="#oNas">O Firmie</a>
         <a href="#projekty">Projekty</a>
         <a href="#kontakt">Kontakt</a>
@@ -37,7 +37,7 @@
                 </video>
             </div>    
             <div class="logo-kontener" id="logo-kontener">
-                <img src="trwaly dom.png" alt="Trwały Dom" id="logo-firmy-obraz">
+                <img src="TDlogo_biale.png" alt="Trwały Dom" id="logo-firmy-obraz">
             </div>
         </div>
     </section>
@@ -54,27 +54,6 @@
         </section>
         <!-- Projekty - sekcja -->
         <section id="projekty">
-                                    <!-- SLAJDER OBRAZOW. FUNKCJA ZAWIESZONA
-                                        <div class="porownanie-obrazow-kontener">
-                                        <div class="porownanie-obrazow-obraz">
-                                            <img src="/Slider/nowy_budynek_1.jpg" width="600" height="400">
-                                        </div>
-                                        <div class="porownanie-obrazow-obraz porownanie-obrazow-nakladka">
-                                            <img src="/Slider/zniszczony_budynek_1.jpg" width="600" height="400">
-                                        </div>
-                                    </div>
-                                    <div class="porownanie-obrazow-kontener">
-                                        <div class="porownanie-obrazow-obraz">
-                                            <img src="/Slider/nowy_budynek_2.jpg" width="600" height="400">
-                                        </div>
-                                        <div class="porownanie-obrazow-obraz porownanie-obrazow-nakladka">
-                                            <img src="/Slider/zniszczony_budynek_2.jpeg" width="600" height="400">
-                                        </div>
-                                    </div>
-                                    <script>
-                                        initComparisons();
-                                    </script> -->
-
             <!-- Lightbox -->
             <div class="gallery-container">
                 <h2>Projekty</h2>
@@ -91,80 +70,6 @@
                     <img src="/Lightbox/img_4.jpg">
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        <!-- Images used to open the lightbox -->
-                                        <!-- <div class="row">
-                                            <div class="column">
-                                                <img src="/Lightbox/img_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="300px" height="200px">
-                                            </div>
-                                            <div class="column">
-                                                <img src="/Lightbox/img_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" width="300px" height="200px">
-                                            </div>
-                                            <div class="column">
-                                                <img src="/Lightbox/img_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="300px" height="200px">
-                                            </div>
-                                            <div class="column">
-                                                <img src="/Lightbox/img_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" width="300px" height="200px">
-                                            </div>
-                
-                                        </div> --->
-            <!-- The Modal/Lightbox -->
-            <!-- <div id="myModal" class="modal">
-                <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
-                    <div class="mySlides">
-                        <div class="numbertext">1 / 4</div>
-                        <img src="/Lightbox/img_1.jpg">
-                    </div>
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 4</div>
-                        <img src="/Lightbox/img_2.jpg">
-                    </div>
-                    <div class="mySlides">
-                        <div class="numbertext">3 / 4</div>
-                        <img src="/Lightbox/img_3.jpg">
-                    </div>
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 4</div>
-                        <img src="/Lightbox/img_4.jpg">
-                    </div> -->
-                    <!-- Next/previous controls -->
-                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>                 -->
-                    <!-- Caption text -->
-                    <!-- <div class="caption-container">
-                        <p id="caption">Is this supposted to say something?</p>
-                    </div> -->
-                    <!-- Thumbnail image controls -->
-                    <!-- <div class="column">
-                        <img class="demo" src="/Lightbox/img_1.jpg" onclick="currentSlide(1)" alt="Nature">
-                    </div>
-                    <div class="column">
-                        <img class="demo" src="/Lightbox/img_2.jpg" onclick="currentSlide(2)" alt="Snow">
-                    </div>
-                    <div class="column">
-                        <img class="demo" src="/Lightbox/img_3.jpg" onclick="currentSlide(3)" alt="Mountains">
-                    </div>
-                    <div class="column">
-                        <img class="demo" src="/Lightbox/img_4.jpg" onclick="currentSlide(4)" alt="Lights">
-                    </div>
-                </div>
-            </div>        -->
-        <!-- !!!!! KONCOWO WYBRAC TYLKO JEDEN ZE SPOSOBOW PRZEDSTAWIANIA ZDJEC !!!! -->
         </section>;
 
         <!-- Kontakt - sekcja -->
@@ -192,12 +97,9 @@
                 </div>
                 <div class="kontakt-form-kontener">
                     <form method="post" action="form.php" id="contact-form">
-                        <input name="name" id="name" placeholder="Imię i Nazwisko" required>
-                        <br>
-                        <input type="email" name="email" id="email" placeholder="Adres e-mail" required>
-                        <br>
-                        <textarea name="message" rows="15" cols="50" id="message" placeholder="Treść wiadomości" required></textarea>
-                        <br>
+                        <input name="name" id="name" class="feedback-input" placeholder="Imię i Nazwisko" required>
+                        <input type="email" name="email" id="email" class="feedback-input" placeholder="Adres e-mail" required>
+                        <textarea name="message" id="message" class="feedback-input" placeholder="Treść wiadomości" required></textarea>
                         <button type="submit">Wyślij</button>
                     </form>
                 </div>
