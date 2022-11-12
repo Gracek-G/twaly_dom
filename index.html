@@ -10,45 +10,48 @@
     <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
 
     <!-- Scripts -->
-    <script src="/Slider/slider.js"></script>
-    <script src="/Lightbox/lightbox.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="logo_firmy_placeholder.png">
+    <link rel="icon" type="image/png" href="TDlogo_bialetlo.png">
 
 </head>
 <body>
     <!-- Menu nawigacji strony -->
     <nav id="nawigacja">
-        <a href="#strona-główna"><img src="TDlogo_basic.png" alt="logo_mini" id="logo-top-right"></a>
-        <a href="#oNas">O Firmie</a>
-        <a href="#projekty">Projekty</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#strona-główna"><img src="TDlogo_basic_noMargin.png" alt="logo_mini" id="logo-miniatura"></a>
+        <a href="#oFirmie" class="hover-anim">O Firmie</a>
+        <a href="#projekty" class="hover-anim">Projekty</a>
+        <a href="#kontakt" class="hover-anim">Kontakt</a>
     </nav>
 
     <!-- Strona główna - sekcja -->
     <section id="strona-główna">
-        <div class="strona-glowna-kontener" id="strona-glowna-kontener">
+        <div class="strona-glowna-kontener">
+            <img src="TDlogo_biale.png" alt="Trwały Dom" class="logo-firmy-obraz">
             <div class="nakładka-wideo"></div>
-            <div class="video-kontener" id="video-kontener">
-                <video class="tło-wideo" loop muted autoplay>
-                    <source src="video-background-1.mp4"></source>
-                </video>
-            </div>    
-            <div class="logo-kontener" id="logo-kontener">
-                <img src="TDlogo_biale.png" alt="Trwały Dom" id="logo-firmy-obraz">
-            </div>
+            <video class="tło-wideo" loop muted autoplay><source src="video-background-1.mp4"></source></video>
         </div>
     </section>
 
     <div class="wrapper">
         <!-- O Firmie - sekcja -->
-        <section id="oNas">
-            <div class="oNas-kontener" id="oNas-kontener">
-                <h2>O Firmie</h2>
-                <div class="ramka-tekstu" id="ramka-tekstu">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <section id="oFirmie">
+            <div class="oFirmie-kontener">
+                <div class="ramka-tekstu">
+                    <div class="f-rows">
+                        <div class="f-upper-row">
+                            <h3>Budownictwo z zasadami</h3>
+                        </div>
+                        <div class="f-bottom-row">
+                            <div class="lewa-strona-opisu">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                </div>
+                                <div class="prawa-strona-opisu">
+                                    <img src="placeholder-portrait.jpg" alt="">
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -76,32 +79,43 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
         
         <section id="kontakt">
-            <h2>Kontakt</h2>
-            <div class="kontakt-ramka">
-                <div class="dane-kontaktowe">
-                    <div class="imie-nazwisko">
-                        <i class="fa-solid fa-fingerprint"></i>
-                        <p>Imię i nazwisko</p>
+            <div class="kontakt-kontener">
+                <div class="kontakt-ramka">
+                    <div class="k-rows">
+                        <div class="k-upper-row">
+                            <h3>Zostaw nam wiadomość</h3>
+                        </div>
+                        <div class="k-bottom-row">
+                            <!-- LEWA STRONA FORMULARZA -->
+                            <div class="k-lewa-strona">
+                                <div class="dane-kontaktowe">
+                                    <i class="fa-solid fa-fingerprint"></i>
+                                    <p>Imię i nazwisko</p>
+                                </div>
+                                <div class="dane-kontaktowe">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <p>adres@email.pl</p>
+                                </div>
+                                <div class="dane-kontaktowe">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <p>+48 999 999 999</p>
+                                </div>
+                                <div class="dane-kontaktowe">
+                                    <img src="mapy-google-temp.jpg" alt="temp">
+                                </div>
+                            </div>
+                            <!-- PRAWA STRONA FORMULARZA -->
+                            <!-- <div class="k-prawa-strona"> -->
+                                <form method="post" action="form.php" id="contact-form" class="k-prawa-strona">
+                                    <input name="name" id="name" class="feedback-input" placeholder="Imię i Nazwisko" required>
+                                    <input type="email" name="email" id="email" class="feedback-input" placeholder="Adres e-mail" required>
+                                    <textarea name="message" id="message" class="feedback-input" placeholder="Treść wiadomości" required></textarea>
+                                    <button type="submit">Wyślij</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="adres-email">
-                        <i class="fa-regular fa-envelope"></i>
-                        <p>adres@email.pl</p>
-                    </div>
-                    <div class="numer-telefonu">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>+48 999 999 999</p>
-                    </div>
-                    <div class="mapa-google">
-                        <img src="mapy-google-temp.jpg" alt="temp" width="400px" height="300px">
-                    </div>
-                </div>
-                <div class="kontakt-form-kontener">
-                    <form method="post" action="form.php" id="contact-form">
-                        <input name="name" id="name" class="feedback-input" placeholder="Imię i Nazwisko" required>
-                        <input type="email" name="email" id="email" class="feedback-input" placeholder="Adres e-mail" required>
-                        <textarea name="message" id="message" class="feedback-input" placeholder="Treść wiadomości" required></textarea>
-                        <button type="submit">Wyślij</button>
-                    </form>
+                    
                 </div>
             </div>
         </section>
