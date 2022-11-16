@@ -122,7 +122,7 @@ nav > a {
 .logo-firmy-obraz {
     z-index: 3;
     position: absolute;
-    width: 60%;
+    width: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -176,13 +176,13 @@ nav > a {
 
 .ramka-tekstu {
     width: 60%;
-    height: auto;
-    background: rgba(85, 85, 85, 1);
-    border: 2px solid #b4b4b4c4;
+    max-height: 600px;
+    background: rgba(85, 85, 85, 0.5);
+    /* border: 2px solid #b4b4b4c4; */
     border-radius: 15px 15px 15px 15px;
     display: flex;
     flex-direction: column;
-    box-shadow:  0px 0px 64px 5px #9c9c9c;
+    /* box-shadow:  0px 0px 64px 5px #9c9c9c; */
 }
 
 .f-upper-row {
@@ -197,6 +197,7 @@ nav > a {
 .f-bottom-row {
     display: flex;
     flex-direction: row;
+    max-height: 500px;
 }
 
 .lewa-strona-opisu {
@@ -205,6 +206,8 @@ nav > a {
     text-align: justify;
     width: 50%;
     margin: 5%;
+    margin-top: 0;
+    line-height: 30px;
 }
 
 .lewa-strona-opisu > p {
@@ -292,7 +295,7 @@ nav > a {
 
 .projekty-background-nakladka {
     position: absolute;
-    background: rgb(194, 94, 0);
+    background: rgb(107, 52, 0);
     opacity: 70%;
     z-index: 2;
     top: 0;
@@ -359,7 +362,7 @@ nav > a {
     border: 2px solid #0e0e0ec4;
     border-radius: 15px 15px 15px 15px;
     box-shadow:  0px 0px 64px 5px #c0c0c0;
-    background: rgba(206, 197, 178, 0.966);
+    background: rgba(239, 239, 239, 0.97);
 }
 
 .k-upper-row {
