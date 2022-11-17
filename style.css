@@ -251,7 +251,7 @@ nav > a {
     position: relative;
 }
 
-.lightbox {
+.galeria {
     position: absolute;
     z-index: 3;
     display: flex;
@@ -283,6 +283,11 @@ nav > a {
     text-align: center;
     color: white;
     font-size: large;
+}
+
+.single-gallery-element > a {
+    text-decoration: none;
+    color: white;
 }
 
 .single-gallery-element > img {
