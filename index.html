@@ -8,16 +8,58 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Lightbox/lightbox-style.css">
     <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
 
     <!-- Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src= "/Lightbox/lightbox.js" defer></script>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="TDlogo_bialetlo.png">
 
 </head>
 <body>
+    <!-- Skrypt wklejający konkretne elementy kalerii do poszczególnych lighboxów -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox1 = Lightbox({
+                showCount : true,
+                showText : true,
+                closeOnBg : false,
+            });
+            lightbox1.addLinks(".gallery-el");
+
+            const lightbox2 = Lightbox({
+                showCount : true,
+                showText : true,
+                closeOnBg : false,
+            });
+            lightbox2.addLinks(".gallery-el2");
+
+            const lightbox3 = Lightbox({
+                showCount : true,
+                showText : true,
+                closeOnBg : false,
+            });
+            lightbox3.addLinks(".gallery-el3");
+
+            const lightbox4 = Lightbox({
+                showCount : true,
+                showText : true,
+                closeOnBg : false,
+            });
+            lightbox4.addLinks(".gallery-el4");
+
+            // YOU CAN ADD ITEMS TO A SEPARATE LIGHTBOX BY CHANGING THE CLASS AND LIGHBOX NAME LIKE IN THE EXAMPLE BELOW
+            // const lightbox2 = Lightbox({
+            //     showCount : true,
+            //     showText : true,
+            //     closeOnBg : false,
+            // });
+            // lightbox2.addLinks(".gallery-el2");
+        });
+    </script>
     <!-- Menu nawigacji strony -->
     <nav id="nawigacja">
         <a href="#strona-główna"><img src="TDlogo_basic_noMargin.png" alt="logo_mini" id="logo-miniatura"></a>
@@ -34,7 +76,6 @@
             <video class="tło-wideo" loop muted autoplay><source src="video 3 mb test.mp4"></source></video>
         </div>
     </section>
-
 
     <!-- O Firmie - sekcja -->
     <section id="oFirmie" class="on-top-of-video">
@@ -57,84 +98,49 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Projekty - sekcja -->
     <section id="projekty" class="on-top-of-video">
         <div class="gallery-container">
-            <div class="lightbox">
+            <div class="galeria">
                 <div class="l-top-row">
                     <h3>Nasze sukcesy</h3>
                 </div>
                 <div class="l-bottom-row">
                     <div class="single-gallery-element">
-                        <a href="/Lightbox/img_4.jpg" >
-                            <img src="/Lightbox/img_4.jpg" alt="img-4" class="lightbox-rep">
-                            <p>Nazwa galerii</p>
+                        <a class="gallery-el" href="./Lightbox/1/img_1.jpg" >
+                            <img src="./Lightbox/1/img_1.jpg" class="lightbox-rep">
+                            <p>Galeria 1</p>
                         </a>
-                        <a href="/Lightbox/img_1.jpg"></a>
-                        <a href="/Lightbox/img_2.jpg"></a>
-                        <a href="/Lightbox/img_3.jpg"></a>
-                        <a href="/Slider/nowy_budynek_1.jpg"></a>
+                        <a class="gallery-el" href="./Lightbox/1/img_2.jpg"></a>
+                        <a class="gallery-el" href="./Lightbox/1/img_3.jpg"></a>
+                        <a class="gallery-el" href="./Lightbox/1/img_4.jpg"></a>
                     </div>
                     <div class="single-gallery-element">
-                        <img src="/Lightbox/img_4.jpg" alt="img-4">
-                        <p>Nazwa galerii</p>
+                        <a class="gallery-el2" href="./Lightbox/2/1.jpg">
+                            <img src="./Lightbox/2/1.jpg" class="lightbox-rep">
+                            <p>Galeria 2</p>
+                        </a>
+                        <a class="gallery-el2" href="./Lightbox/2/2.jpg"></a>
+                        <a class="gallery-el2" href="./Lightbox/2/3.jpg"></a>
+                        <a class="gallery-el2" href="./Lightbox/2/4.jpg"></a>
                     </div>
                     <div class="single-gallery-element">
-                        <img src="/Lightbox/img_4.jpg" alt="img-4">
-                        <p>Nazwa galerii</p>
+                        <a class="gallery-el3" href="./Lightbox/3/1.jpg">
+                            <img src="./Lightbox/3/1.jpg" class="lightbox-rep">
+                            <p>Galeria 3</p>
+                        </a>
+                        <a class="gallery-el3" href="./Lightbox/3/2.jpg"></a>
+                        <a class="gallery-el3" href="./Lightbox/3/3.jpg"></a>
+                        <a class="gallery-el3" href="./Lightbox/3/4.jpg"></a>
                     </div>
                     <div class="single-gallery-element">
-                        <img src="/Lightbox/img_4.jpg" alt="img-4">
-                        <p>Nazwa galerii</p>
+                        <a class="gallery-el4" href="./Lightbox/4/1.jpg">
+                            <img src="./Lightbox/4/1.jpg" class="lightbox-rep">
+                            <p>Galeria 4</p>
+                        </a>
+                        <a class="gallery-el4" href="./Lightbox/4/2.jpg"></a>
+                        <a class="gallery-el4" href="./Lightbox/4/3.jpg"></a>
+                        <a class="gallery-el4" href="./Lightbox/4/4.jpg"></a>
                     </div>
                 </div>
             </div>
@@ -144,43 +150,6 @@
             </div>
         </div>
     </section>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Kontakt - sekcja -->
     <section id="kontakt" class="on-top-of-video">
